@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A6E4B16-83E1-437F-9DC0-F4EA210D3AC8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InventorySystem</RootNamespace>
+    <AssemblyName>InventorySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllForms\CustomerForms\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\CustomerForms\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\FrmInventorySystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\FrmInventorySystem.Designer.cs">
+      <DependentUpon>FrmInventorySystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\PurchaseForms\frmPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\PurchaseForms\frmPurchase.Designer.cs">
+      <DependentUpon>frmPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\PurchaseForms\frmPurchasePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\PurchaseForms\frmPurchasePayment.Designer.cs">
+      <DependentUpon>frmPurchasePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Receipt Forms\frmPurchaseDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Receipt Forms\frmPurchaseDetailReport.Designer.cs">
+      <DependentUpon>frmPurchaseDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Receipt Forms\frmReceiptPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Receipt Forms\frmReceiptPayment.Designer.cs">
+      <DependentUpon>frmReceiptPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\StockForms\frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\StockForms\frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\StockForms\frmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\StockForms\frmProducts.Designer.cs">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\StockForms\frmStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\StockForms\frmStockReport.Designer.cs">
+      <DependentUpon>frmStockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\PurchaseForms\frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\PurchaseForms\frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\SupplierForms\frmSupplierBalances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\SupplierForms\frmSupplierBalances.Designer.cs">
+      <DependentUpon>frmSupplierBalances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllReports\rptPaymentRecipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPaymentRecipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AllReports\rptPurchaseReciptReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPurchaseReciptReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AllReports\rptStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\ComboBoxList.cs" />
+    <Compile Include="DatabaseLayer\DBL.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AllForms\CustomerForms\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\FrmInventorySystem.resx">
+      <DependentUpon>FrmInventorySystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\PurchaseForms\frmPurchase.resx">
+      <DependentUpon>frmPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\PurchaseForms\frmPurchasePayment.resx">
+      <DependentUpon>frmPurchasePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Receipt Forms\frmPurchaseDetailReport.resx">
+      <DependentUpon>frmPurchaseDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Receipt Forms\frmReceiptPayment.resx">
+      <DependentUpon>frmReceiptPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\StockForms\frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\StockForms\frmProducts.resx">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\StockForms\frmStockReport.resx">
+      <DependentUpon>frmStockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\PurchaseForms\frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\SupplierForms\frmSupplierBalances.resx">
+      <DependentUpon>frmSupplierBalances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports\rptPaymentRecipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPaymentRecipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports\rptPurchaseReciptReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPurchaseReciptReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports\rptStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStock.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Inventory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
